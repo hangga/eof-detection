@@ -19,45 +19,45 @@ public class TestEOFDetection {
 
     @Test
     @Order(1)
-    public void testWithFileInputStream() {
+    public void givenDummyText_whenReadWithFileInputStream_returnText() {
         try {
-            assertEquals(LOREM_IPSUM, eofDetection.readWithFIleInputStream(pathToFile));
+            String actualText = eofDetection.readWithFIleInputStream(pathToFile);
+            assertEquals(LOREM_IPSUM, actualText);
         } catch (IOException e) {
             fail(e.getMessage());
-            //throw new RuntimeException(e);
         }
     }
 
     @Test
     @Order(2)
-    public void testReadFileWithBufferedReader() {
+    public void givenDummyText_whenReadFileWithBufferedReader_returnText() {
         try {
-            assertEquals(LOREM_IPSUM, eofDetection.readWithBufferedReader(pathToFile));
+            String actualText = eofDetection.readWithBufferedReader(pathToFile);
+            assertEquals(LOREM_IPSUM, actualText);
         } catch (IOException e) {
             fail(e.getMessage());
-            //throw new RuntimeException(e);
         }
     }
 
     @Test
     @Order(3)
-    public void testReadFileWithScanner() {
+    public void givenDummyText_whenReadFileWithScanner_returnText() {
         try {
-            assertEquals(LOREM_IPSUM, eofDetection.readWithScanner(pathToFile));
+            String actualText = eofDetection.readWithScanner(pathToFile);
+            assertEquals(LOREM_IPSUM, actualText);
         } catch (IOException e) {
             fail(e.getMessage());
-            //throw new RuntimeException(e);
         }
     }
 
     @Test
     @Order(4)
-    public void testReadFileWithFileChannelAndByteBuffer() {
+    public void givenDummyText_whenReadFileWithFileChannelAndByteBuffer_returnText() {
         try {
-            assertEquals(LOREM_IPSUM, eofDetection.readFileWithFileChannelAndByteBuffer(pathToFile));
+            String actualText = eofDetection.readFileWithFileChannelAndByteBuffer(pathToFile);
+            assertEquals(LOREM_IPSUM, actualText);
         } catch (IOException e) {
             fail(e.getMessage());
-            //throw new RuntimeException(e);
         }
     }
 
